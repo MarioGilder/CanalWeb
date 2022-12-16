@@ -1,0 +1,285 @@
+:root{
+    --blanco:#ffffff;
+    --oscuro:#212121;
+    --primario:#FFC107;
+    --secundario:#0097A7;
+    --gris:#757575;
+    --grisClaro:#DFE9F3;
+    
+    --fuentePrincipal:'Staatliches', cursive;
+}
+
+html {
+    box-sizing: border-box;
+    /**Permite convertir 1rem a 10px **/
+    font-size: 62.5%;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/**Globales- color de fondo**/
+body{
+    background-image:url(../CANALES/img/portada_fondo3.jpg);
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+  /**font-size: 1.6rem;/**Tamaño de fuente**/
+    /**line-height: 1.5;/**Interlineado**/
+    
+
+    
+}
+
+.fondo{
+    background-color:white;
+    border-radius: 2rem;
+    width: 90%;
+    
+}
+/******************************************************************************************************************/
+.contenedor-tit{
+    max-width: 120rem; /**Ancho de texto*/
+    margin: 0 auto;/**margen de 0**/
+    text-align: center;/**alineacion de texto centrado**/
+    font-size: responsive;
+}
+
+
+
+
+.titulo{
+    background-color: var(--secundario);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    border-radius: 2rem;
+    margin: 0.5rem;
+     
+}
+
+
+.titulo__enlace{
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    font-size: 5rem;
+    
+}
+
+
+
+
+/***************************************************************/
+
+
+
+
+
+/**Parrafos**/
+p{
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+}
+
+
+
+
+/**Quitar rallado**/
+a{
+    text-decoration: none;
+}
+
+/**Formato de imgen**/
+img{
+    max-width: 100%;
+}
+
+/**Formato de imgen**/
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.sombra{
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(77,72,77,1);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(77,72,77,1);
+    box-shadow: 0px 5px 15px 0px rgba(77,72,77,1);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+    
+}
+
+
+
+    /**Titulos**/
+h1,h2,h3{
+    text-align: center;
+    color: var(--secundario);
+    font-family: var(--fuentePrincipal);
+}
+
+h1{font-size: 4rem;}
+h2{font-size: 3.2rem;}
+h3{font-size: 2.4rem;}
+
+.nota{
+    text-align:left
+}
+
+/**Embacezado**/
+.header{
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+    
+}
+
+.contenedor-nav{
+    max-width: 120rem;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+.navegacion{
+    background-color:var(--secundario);/**color de franja del menu de navegacion**/
+    padding: 1rem 0;/**alto de la franja 1rem y ancho 0**/
+    display: flex;/**habilitar las opciones**/
+    justify-content: center;/**centrar contenido**/
+    gap: 2rem;/**separacion de 2rem o 20px**/
+    border-radius: 2rem;
+    margin: 0.5rem;
+    flex-direction: column;
+}
+@media (min-width: 768px) {
+    .navegacion{
+    flex-direction: row;
+    justify-content: space-between;
+    }
+   
+}
+
+
+.navegacion__enlace{
+    font-family: var(--fuentePrincipal);/**agrega fuente principal**/
+    color: var(--blanco);/**Cambia de color el texto**/
+    font-size: 3rem;/**tamaño de fuente de letra**/
+        
+    
+    
+}
+
+
+
+@media (min-width: 768px) {
+    .navegacion__enlace{
+    flex-direction: row;
+    justify-content: space-between;
+    
+    }
+   
+}
+
+
+
+
+.navegacion__enlace:hover{
+    color: var(--oscuro) ;/**Cambia el color del texto cuando señalan con el puntero**/
+    padding: auto;
+    border-radius: 2rem;
+    background-color: var(--grisClaro);
+    
+
+    
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    color: #212121;
+}
+
+.footer__text{
+    color:var(--blanco);
+    font-family: var(--fuentePrincipal);
+    font-size: 2rem;
+    background-color: var(--secundario);
+    border-radius: 1rem;
+}
+
+
+/**grid**/
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+    text-align: center;
+    
+
+}
+@media (min-width: 768px) {
+    .grid{
+        grid-template-columns: repeat(4,1fr);
+    }
+   
+}
+
+.canal{
+    grid: auto;
+    background-color: var(--secundario);
+    padding: 1rem;
+
+}
+
+.canal__imagen{
+    width:100%;
+    object-fit: cover;
+    object-position:center center;
+    height:20rem; 
+  
+
+}
+
+.canal__imagen:hover{
+    opacity: 0.5;/**AGREGA OPACIDAD A LA IMAGEN A SEÑALAR**/
+}
+
+.canal__nombre{
+    font-size: 4rem;
+    color: var(--blanco);
+    font-family: var(--fuentePrincipal);
+    margin: 1rem 0;
+    text-align: center;
+   
+    
+}
+.nombre{
+    font-weight: bold;
+}
+
+
+
+.video{
+    background-color:var(--secundario);/**color de franja del menu de navegacion**/
+    padding: 1rem 1rem;/**alto de la franja 1rem y ancho 0**/
+    display: flex;/**habilitar las opciones**/
+    justify-content: center;/**centrar contenido**/
+    gap: 2rem;/**separacion de 2rem o 20px**/
+    border-radius: 3rem;
+    color: var(--blanco);
+}
+
+
+
+
+
+
+
+
